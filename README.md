@@ -43,7 +43,7 @@ This project will follow a phased development plan focused on establishing the c
 
 [ ] ⚔️ Phase 2: Combat & Core Loop
 
-[ ] Implement Basic Enemy (The RedSquare) and movement AI.
+[x] Implement Basic Enemy (The RedSquare) and movement AI.
 
 [ ] Implement Player Primary Attack (Simple projectile).
 
