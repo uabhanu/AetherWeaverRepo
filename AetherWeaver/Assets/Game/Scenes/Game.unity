@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 1868859675}
   - component: {fileID: 1868859677}
   - component: {fileID: 1868859676}
+  - component: {fileID: 1868859678}
   - component: {fileID: 1868859674}
   m_Layer: 0
   m_Name: Player
@@ -464,6 +465,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Player.PlayerInputHandler
   onDashInput: {fileID: 11400000, guid: 57036c0a306da284da01928e19aa9476, type: 2}
   onMoveInput: {fileID: 11400000, guid: a09e5a68828bbb54399fd1d948504866, type: 2}
+--- !u!114 &1868859678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868859673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fde4c30f7b9a348854bd96a00a5cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Player.PlayerVfxController
+  dashColor: {r: 0, g: 1, b: 1, a: 1}
+  dashDuration: 0.3
+  flickerRate: 0.05
+  onDashInput: {fileID: 11400000, guid: 57036c0a306da284da01928e19aa9476, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
