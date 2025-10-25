@@ -27,19 +27,19 @@ Data Management: Extensive use of ScriptableObjects (SOAP Variables).
 🗺️ Development Roadmap
 This project will follow a phased development plan focused on establishing the core loops first. The current focus is on Phase 1.
 
-[ ] 💡 Phase 0: Project Conception & Foundation
+[x] 💡 Phase 0: Project Conception & Foundation
 
-[ ] Initial Game Design & Concept
+[x] Initial Game Design & Concept
 
-[ ] GitHub Repository Setup
+[x] GitHub Repository Setup
 
-[ ] ⚙️ Phase 1: Core Movement & Input
+[x] ⚙️ Phase 1: Core Movement & Input
 
-[ ] Implement New Input System Integration
+[x] Implement New Input System Integration
 
-[ ] PlayerMovement Component with PlayerMoveSpeedSOAP
+[x] PlayerMovement Component
 
-[ ] Implement Dash action and cooldown system.
+[x] Implement Dash action and cooldown system.
 
 [ ] ⚔️ Phase 2: Combat & Core Loop
 
