@@ -19,12 +19,21 @@ namespace Game.Scripts.Player
         [SerializeField] private float moveSpeed;
         [SerializeField] private ScriptableEventNoParam onDashInput;
         [SerializeField] private ScriptableEventVector2 onMoveInput;
+        [SerializeField] private ScriptableEventGameObject onPlayerRegistered;
 
         #endregion
 
         #region Unity Methods
 
-        private void Awake() { _mainCamera = Camera.main; }
+        private void Awake()
+        {
+            _mainCamera = Camera.main;
+        }
+        
+        private void Start()
+        {
+            onPlayerRegistered?.Raise(gameObject); 
+        }
 
         private void OnEnable()
         {
