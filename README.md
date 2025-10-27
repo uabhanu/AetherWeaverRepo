@@ -47,7 +47,7 @@ This project will follow a phased development plan focused on establishing the c
 
 [x] Implement Player Primary Attack (Simple projectile).
 
-[ ] Implement Player Health and Enemy Damage system.
+[x] Implement Player Health and Enemy Damage system.
 
 [ ] Implement Enemy Death and Loot Drop (XP and base AetherShard).
 
