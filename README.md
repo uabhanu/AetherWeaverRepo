@@ -45,7 +45,7 @@ This project will follow a phased development plan focused on establishing the c
 
 [x] Implement Basic Enemy (The RedSquare) and movement AI.
 
-[ ] Implement Player Primary Attack (Simple projectile).
+[x] Implement Player Primary Attack (Simple projectile).
 
 [ ] Implement Player Health and Enemy Damage system.
 
