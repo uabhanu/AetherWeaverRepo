@@ -11,6 +11,7 @@ namespace Game.Scripts.Player
         
         [SerializeField] private ScriptableEventNoParam onDashInput;
         [SerializeField] private ScriptableEventVector2 onMoveInput;
+        [SerializeField] private ScriptableEventNoParam onPrimaryAttackInput;
 
         #endregion
 
@@ -24,6 +25,8 @@ namespace Game.Scripts.Player
             
             _playerInputActions.Player.Move.performed += ctx => onMoveInput?.Raise(ctx.ReadValue<Vector2>());
             _playerInputActions.Player.Move.canceled += _ => onMoveInput?.Raise(Vector2.zero);
+            
+            _playerInputActions.Player.PrimaryAttack.performed += _ => onPrimaryAttackInput?.Raise();
         }
 
         private void OnEnable() { _playerInputActions.Enable(); }

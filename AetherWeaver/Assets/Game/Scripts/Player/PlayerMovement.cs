@@ -3,6 +3,7 @@ namespace Game.Scripts.Player
     using Obvious.Soap;
     using System.Collections;
     using UnityEngine;
+    using UnityEngine.InputSystem;
 
     public class PlayerMovement : MonoBehaviour
     {
@@ -25,15 +26,9 @@ namespace Game.Scripts.Player
 
         #region Unity Methods
 
-        private void Awake()
-        {
-            _mainCamera = Camera.main;
-        }
-        
-        private void Start()
-        {
-            onPlayerRegistered?.Raise(gameObject); 
-        }
+        private void Awake() { _mainCamera = Camera.main; }
+
+        private void Start() { onPlayerRegistered?.Raise(gameObject); }
 
         private void OnEnable()
         {
@@ -58,6 +53,8 @@ namespace Game.Scripts.Player
             ClampPlayerPosition();
 
             if(_dashCooldownTimer > 0) { _dashCooldownTimer -= Time.deltaTime; }
+
+            RotateToMovementDirection();
         }
 
         #endregion
@@ -96,6 +93,17 @@ namespace Game.Scripts.Player
             _dashCooldownTimer = dashCooldown;
         }
 
+        private void RotateToMovementDirection()
+        {
+            Vector2 direction = _moveInput.normalized;
+            
+            if(direction.sqrMagnitude > 0)
+            {
+                float angle = Mathf.Atan2(direction.y , direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f , 0f , angle);
+            }
+        }
+
         #endregion
 
         #region My Soap Event Listeners
@@ -105,11 +113,8 @@ namespace Game.Scripts.Player
             if(_dashCooldownTimer <= 0 && !_isDashing)
             {
                 Vector2 dashDirection = _moveInput.normalized;
-                
-                if(dashDirection == Vector2.zero)
-                {
-                    dashDirection = new Vector2(0f , 1f);
-                }
+
+                if(dashDirection == Vector2.zero) { dashDirection = new Vector2(0f , 1f); }
 
                 StartCoroutine(DashCoroutine(dashDirection));
             }
