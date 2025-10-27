@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000037ab6e0b47cefc96
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -340,6 +340,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &863399414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863399416}
+  - component: {fileID: 863399415}
+  m_Layer: 0
+  m_Name: ProjectileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &863399415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863399414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1086fcb120a0b19428e868f40e07f619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Combat.ProjectileSpawner
+  onProjectileLaunch: {fileID: 11400000, guid: ef53a9928dbc3164db7c0dada7879bbb, type: 2}
+--- !u!4 &863399416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863399414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868859673
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1868859675}
+  - component: {fileID: 1868859679}
   - component: {fileID: 1868859677}
   - component: {fileID: 1868859676}
   - component: {fileID: 1868859678}
@@ -404,8 +450,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 191802167
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
@@ -466,6 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Player.PlayerInputHandler
   onDashInput: {fileID: 11400000, guid: 57036c0a306da284da01928e19aa9476, type: 2}
   onMoveInput: {fileID: 11400000, guid: a09e5a68828bbb54399fd1d948504866, type: 2}
+  onPrimaryAttackInput: {fileID: 11400000, guid: 00526d305d597b443a9a27fb6516578f, type: 2}
 --- !u!114 &1868859678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +529,24 @@ MonoBehaviour:
   dashDuration: 0.3
   flickerRate: 0.05
   onDashInput: {fileID: 11400000, guid: 57036c0a306da284da01928e19aa9476, type: 2}
+--- !u!114 &1868859679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868859673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01592e3d0b297488d6a8ac6e99e9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Player.PlayerAttacker
+  attackCooldown: 0.6
+  projectilePrefab: {fileID: 8422178400248251653, guid: fe813d8c01f85444a820cbed9260e0f0, type: 3}
+  spawnOffsetDistance: 0
+  spawnPoint: {fileID: 1868859675}
+  onPrimaryAttackInput: {fileID: 11400000, guid: 00526d305d597b443a9a27fb6516578f, type: 2}
+  onProjectileLaunch: {fileID: 11400000, guid: ef53a9928dbc3164db7c0dada7879bbb, type: 2}
 --- !u!1 &1936070095
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,8 +609,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 191802167
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -595,3 +660,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1868859675}
   - {fileID: 1936070097}
+  - {fileID: 863399416}
