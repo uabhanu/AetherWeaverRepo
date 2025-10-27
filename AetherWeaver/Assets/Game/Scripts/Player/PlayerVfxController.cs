@@ -12,7 +12,7 @@ namespace Game.Scripts.Player
         private SpriteRenderer _spriteRenderer;
 
         [Header("Dash Visuals")]
-        [SerializeField] private Color dashColor = Color.cyan;
+        [SerializeField] private Color dashColor;
         [SerializeField] private float dashDuration;
         [SerializeField] private float flickerRate;
         
