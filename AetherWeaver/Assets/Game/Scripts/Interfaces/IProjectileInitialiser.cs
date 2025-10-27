@@ -4,6 +4,6 @@ namespace Game.Scripts.Interfaces
     
     public interface IProjectileInitialiser
     {
-        void Initialize(Vector3 direction , Transform spawnPoint);
+        void Initialize(Vector3 direction);
     }
 }

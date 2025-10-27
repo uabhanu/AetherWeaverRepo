@@ -1,6 +1,7 @@
 namespace Game.Scripts.Combat
 {
     using Interfaces;
+    using Obvious.Soap;
     using UnityEngine;
 
     public class Projectile : MonoBehaviour , IProjectileInitialiser
@@ -8,7 +9,9 @@ namespace Game.Scripts.Combat
         #region Variables
 
         private Vector3 _direction;
+        private ScriptableEventFloat _onTakeDamage;
 
+        [SerializeField] private FloatVariable damageVariable;
         [SerializeField] private float lifetime;
         [SerializeField] private float speed;
 
@@ -19,6 +22,20 @@ namespace Game.Scripts.Combat
         private void Start() { Destroy(gameObject , lifetime); }
 
         private void Update() { transform.position += _direction * (speed * Time.deltaTime); }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            IDamageTaker iDamageTaker = other.GetComponent<IDamageTaker>();
+
+            if(iDamageTaker != null)
+            {
+                ScriptableEventFloat targetTakeDamage = iDamageTaker.OnTakeDamageEvent;
+
+                if(targetTakeDamage) { targetTakeDamage.Raise(damageVariable.Value); }
+
+                Destroy(gameObject);
+            }
+        }
 
         #endregion
 
@@ -35,7 +52,7 @@ namespace Game.Scripts.Combat
 
         #region My Interface Methods
 
-        public void Initialize(Vector3 direction , Transform transform) { SetDirection(direction); }
+        public void Initialize(Vector3 direction) { SetDirection(direction); }
 
         #endregion
     }

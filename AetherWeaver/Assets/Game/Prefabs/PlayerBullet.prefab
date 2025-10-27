@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 6854660651939744022, guid: 7eef939d20f87a746bfdcc08742a4381, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878020787348487799, guid: 7eef939d20f87a746bfdcc08742a4381, type: 3}
+      propertyPath: damageVariable
+      value: 
+      objectReference: {fileID: 11400000, guid: cb3b069026366b840a830b2e747e1277, type: 2}
     - target: {fileID: 8397319445048363356, guid: 7eef939d20f87a746bfdcc08742a4381, type: 3}
       propertyPath: m_Color.g
       value: 0

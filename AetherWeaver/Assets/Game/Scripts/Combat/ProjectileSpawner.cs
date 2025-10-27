@@ -30,7 +30,7 @@ namespace Game.Scripts.Combat
 
             IProjectileInitialiser iProjectileInitializer = projectileObject.GetComponent<IProjectileInitialiser>();
 
-            iProjectileInitializer?.Initialize(projectileData.Direction , projectileData.SpawnPoint);
+            iProjectileInitializer?.Initialize(projectileData.Direction);
         }
 
         #endregion
