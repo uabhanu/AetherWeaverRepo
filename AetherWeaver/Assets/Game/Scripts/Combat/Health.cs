@@ -7,8 +7,7 @@ namespace Game.Scripts.Combat
     public class Health : MonoBehaviour , IDamageTaker
     {
         #region Variables
-
-        [Header("SOAP Variables")]
+        
         [SerializeField] private FloatVariable currentHealthVariable;
         [SerializeField] private FloatVariable maxHealthVariable;
         [SerializeField] private ScriptableEventNoParam onDied;
@@ -54,7 +53,7 @@ namespace Game.Scripts.Combat
         
         #endregion
         
-        #region My Soap Event Listeners
+        #region My SOAP Event Listeners
 
         private void OnTakeDamage(float damageAmount)
         {

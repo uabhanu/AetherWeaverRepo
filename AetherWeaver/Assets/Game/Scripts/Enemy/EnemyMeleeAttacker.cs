@@ -11,8 +11,7 @@ namespace Game.Scripts.Enemy
         private float _attackTimer;
         private IDamageTaker _damageTaker;
         private bool _isAttacking;
-
-        [Header("SOAP Variables")]
+        
         [SerializeField] private FloatVariable meleeAttackDamage;
         [SerializeField] private FloatVariable meleeAttackRate;
 
