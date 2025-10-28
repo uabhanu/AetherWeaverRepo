@@ -41,7 +41,7 @@ This project will follow a phased development plan focused on establishing the c
 
 [x] Implement Dash action and cooldown system.
 
-[ ] ⚔️ Phase 2: Combat & Core Loop
+[x] ⚔️ Phase 2: Combat & Core Loop
 
 [x] Implement Basic Enemy (The RedSquare) and movement AI.
 
@@ -49,7 +49,7 @@ This project will follow a phased development plan focused on establishing the c
 
 [x] Implement Player Health and Enemy Damage system.
 
-[ ] Implement Enemy Death and Loot Drop (XP and base AetherShard).
+[x] Implement Enemy Death and Loot Drop (XP and base AetherShard).
 
 [ ] 🌐 Phase 3: Roguelite Structure
 
