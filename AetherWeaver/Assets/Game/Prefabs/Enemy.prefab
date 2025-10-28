@@ -44,14 +44,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4338283962832572237, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
-      propertyPath: meleeAttackRate
-      value: 
-      objectReference: {fileID: 11400000, guid: c0ac3d58857e58c49acfbc0ecc0dabaf, type: 2}
-    - target: {fileID: 4338283962832572237, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
-      propertyPath: meleeAttackDamage
-      value: 
-      objectReference: {fileID: 11400000, guid: a7a38f43585debf4e94a6a6b87b68409, type: 2}
     - target: {fileID: 6983577457739572805, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -69,6 +61,7 @@ PrefabInstance:
     - {fileID: 1959587427261197404, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
     - {fileID: 1531074475735838207, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
     - {fileID: 4580662267308923122, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
+    - {fileID: 5775309452336696207, guid: 73f68bcb0acd8d64da1be74b38787942, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

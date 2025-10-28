@@ -10,13 +10,11 @@ namespace Game.Scripts.Player
         
         private Color _originalColor;
         private SpriteRenderer _spriteRenderer;
-
-        [Header("Dash Visuals")]
+        
         [SerializeField] private Color dashColor;
         [SerializeField] private float dashDuration;
         [SerializeField] private float flickerRate;
         
-        [Header("SOAP Events")]
         [SerializeField] private ScriptableEventNoParam onDashInput;
 
         #endregion
@@ -61,7 +59,7 @@ namespace Game.Scripts.Player
 
         #endregion
 
-        #region My Soap Event Listeners
+        #region My SOAP Event Listeners
 
         private void OnDashInput()
         {

@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 4338283962832572237}
   - component: {fileID: 7276965767748785873}
   - component: {fileID: 720271758639862465}
+  - component: {fileID: 521101035135815720}
   - component: {fileID: 2938639305199534518}
+  - component: {fileID: 5775309452336696207}
   - component: {fileID: 1959587427261197404}
   - component: {fileID: 1531074475735838207}
   - component: {fileID: 4580662267308923122}
@@ -99,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c240db47ea430b45946528df1bf94bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Enemy.EnemyMeleeAttacker
-  meleeAttackDamage: {fileID: 0}
+  meleeAttackDamage: {fileID: 11400000, guid: a7a38f43585debf4e94a6a6b87b68409, type: 2}
+  meleeAttackRate: {fileID: 11400000, guid: c0ac3d58857e58c49acfbc0ecc0dabaf, type: 2}
 --- !u!114 &7276965767748785873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +134,21 @@ MonoBehaviour:
   maxHealthVariable: {fileID: 0}
   onDied: {fileID: 11400000, guid: 6a5908288cbd38840a2e751b66d7fc7d, type: 2}
   onTakeDamage: {fileID: 0}
+--- !u!114 &521101035135815720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464877237420217903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e1730ef145d5b4d951391fb03bcb8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Enemy.LootDropper
+  enemyXpValueVariable: {fileID: 11400000, guid: 95980faaf9816ce4091ebc3be0cff740, type: 2}
+  onDied: {fileID: 11400000, guid: 6a5908288cbd38840a2e751b66d7fc7d, type: 2}
+  onPlayerExperienceGained: {fileID: 11400000, guid: e6ae3e66d5b01874683b82e546d065e1, type: 2}
 --- !u!114 &2938639305199534518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +167,20 @@ MonoBehaviour:
   spawnPoint: {fileID: 2960455868292664698}
   onPrimaryAttackInput: {fileID: 11400000, guid: 00526d305d597b443a9a27fb6516578f, type: 2}
   onProjectileLaunch: {fileID: 11400000, guid: ef53a9928dbc3164db7c0dada7879bbb, type: 2}
+--- !u!114 &5775309452336696207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464877237420217903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e2912bdf3c73a4488375575c5cb307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Player.PlayerExperienceTracker
+  onPlayerExperienceGained: {fileID: 11400000, guid: e6ae3e66d5b01874683b82e546d065e1, type: 2}
+  playerExperienceVariable: {fileID: 11400000, guid: 4ad8af3b7161830498bc32b49929dfd7, type: 2}
 --- !u!114 &1959587427261197404
 MonoBehaviour:
   m_ObjectHideFlags: 0

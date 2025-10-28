@@ -48,7 +48,7 @@ namespace Game.Scripts.Player
 
         #endregion
 
-        #region My Soap Event Listeners
+        #region My SOAP Event Listeners
 
         private void OnPrimaryAttack()
         {

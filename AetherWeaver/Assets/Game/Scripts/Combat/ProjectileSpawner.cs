@@ -8,8 +8,7 @@ namespace Game.Scripts.Combat
     public class ProjectileSpawner : MonoBehaviour
     {
         #region Variables
-
-        [Header("SOAP Events")]
+        
         [SerializeField] private ScriptableEventProjectileData onProjectileLaunch;
 
         #endregion

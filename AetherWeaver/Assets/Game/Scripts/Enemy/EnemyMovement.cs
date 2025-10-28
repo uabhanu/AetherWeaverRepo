@@ -9,12 +9,10 @@ namespace Game.Scripts.Enemy
 
         private GameObject _playerGameObject;
         private float _sqrStoppingDistance;
-
-        [Header("Configuration")]
+        
         [SerializeField] private float moveSpeed;
         [SerializeField] private float stoppingDistance;
-
-        [Header("SOAP")]
+        
         [SerializeField] private ScriptableEventGameObject onPlayerRegistered;
 
         #endregion
@@ -42,7 +40,7 @@ namespace Game.Scripts.Enemy
 
         #endregion
 
-        #region My Soap Event Listeners
+        #region My SOAP Event Listeners
 
         private void OnPlayerRegistered(GameObject registeredPlayerGameObject) { _playerGameObject = registeredPlayerGameObject; }
 
