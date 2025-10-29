@@ -416,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Core.DungeonGenerator
   availableRoomsSosList:
   - {fileID: 11400000, guid: 88371e69792bf8844997e169dde63e9d, type: 2}
+  - {fileID: 11400000, guid: c9e9dac506b7ff441a4eb6c837d4d7e5, type: 2}
   numberOfRooms: 5
   onRoomLayoutGenerated: {fileID: 11400000, guid: b293cc7ebf0053e4e86ad645269fa98a, type: 2}
   roomSpacing: 30

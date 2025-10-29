@@ -188,6 +188,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1135274242322150499, guid: 903f79055c320d545b28005ba4673282, type: 3}
+      propertyPath: roomLayoutSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 88371e69792bf8844997e169dde63e9d, type: 2}
     - target: {fileID: 6854445289176155526, guid: 903f79055c320d545b28005ba4673282, type: 3}
       propertyPath: m_Name
       value: Room_Straight
